@@ -1,3 +1,5 @@
+#Python Match
+#dibanding menggunakan banyak perintah if else, kita bisa menggunakan perintah match
 day = 4
 match day:
   case 1:
@@ -15,6 +17,8 @@ match day:
   case 7:
     print("Sunday")
 
+#Default Value
+#pake _ di posisi terakhir kata case, jika kode ingin ditempatkan pada yang tidak sesuai:
     day = 4
 match day:
   case 1 | 2 | 3 | 4 | 5:
@@ -22,7 +26,16 @@ match day:
   case 6 | 7:
     print("I love weekends!")
 
-    month = 5
+#Combine Values
+day = 4
+match day:
+  case 1 | 2 | 3 | 4 | 5:
+    print("Today is a weekday")
+  case 6 | 7:
+    print("I love weekends!")
+
+#If Statements as Guards
+month = 5
 day = 4
 match day:
   case 1 | 2 | 3 | 4 | 5 if month == 4:
@@ -32,30 +45,4 @@ match day:
   case _:
     print("No match")
 
-    i = 1
-while i < 6:
-  print(i)
-  if i == 3:
-    break
-  i += 1 
-
-  i = 0
-while i < 6:
-  i += 1
-  if i == 3:
-    continue
-  print(i)
-
-  fruits = ["apple", "banana", "cherry"]
-for x in fruits:
-  print(x)
-
-  for x in "banana":
-  print(x)
-
-  for x in range(6):
-  print(x)
-
-  for x in range(2, 6):
-  print(x)
-  
+   
